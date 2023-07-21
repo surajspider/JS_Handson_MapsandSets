@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <style>
+        div{
+            border:2px solid black;
+            width:450px;
+            text-align: center;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Count the characters</h1>
+        <hr>
+        <label for="inp">Enter a string:</label>
+        <input id="inp" name="inp" placeholder="Enter a string"><br><br>
+        <button id="sub" onclick="setss()">Submit</button>
+        <hr>
+        <h2></h2>
+    </div>
+
+    <script>
+        function setss()
+        {
+            let input=document.getElementById("inp").value;
+            let anstag=document.getElementsByTagName("h2")[0];
+            let str=input;
+            let text="";
+            let alphabet = new Map();
+                for (let char of str) {
+                    if (alphabet.has(char)) {
+                        alphabet.set(char, alphabet.get(char) + 1);
+                    }
+                    else {
+                        alphabet.set(char, 1);
+                    }
+                }
+                console.log(alphabet);
+                for (let [key, value] of alphabet) {
+                    console.log(key + "=" + value);
+                    text=text+"<br>"+key+"="+value;
+                }
+                anstag.innerHTML=text;
+         }
+        
+        
+    </script>
+</body>
+</html>

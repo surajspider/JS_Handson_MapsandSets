@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <style>
+        div{
+            border:2px solid black;
+            width:450px;
+            text-align: center;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Remove Duplicates</h1>
+        <hr>
+        <label for="inp">Enter a string:</label>
+        <input id="inp" name="inp" placeholder="Enter a string"><br><br>
+        <button id="sub" onclick="setss()">Submit</button>
+        <hr>
+        <h2></h2>
+    </div>
+
+    <script>
+        function setss()
+        {
+            let input=document.getElementById("inp").value;
+            let anstag=document.getElementsByTagName("h2")[0];
+            let str=input;
+            let arr = str.split("");
+            console.log(arr);
+            let ans = new Set(arr);
+            console.log(ans);
+            let text="";
+            for(let key of ans)
+            {
+                text=text+key;
+            }
+            anstag.innerHTML=text;
+        }
+        
+    </script>
+</body>
+</html>

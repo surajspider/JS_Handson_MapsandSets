@@ -1,0 +1,20 @@
+.answer {
+    text-decoration: underline;
+    display: inline-block;
+    margin: 0;
+}
+
+pre {
+    font-size: larger;
+}
+
+.code {
+    background-color: aquamarine;
+    color: green;
+    font-size: x-large;
+    text-decoration: none !important;
+}
+
+a {
+    margin-left: 20px;
+}
